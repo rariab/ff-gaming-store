@@ -1,1 +1,167 @@
 
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090d18">
+<title>FF GAMING STORE</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#090d18;color:#fff;line-height:1.6}
+header{background:#111a2c;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;border-bottom:1px solid #29354b}
+.logo{font-size:23px;font-weight:bold;color:#ffb52e}
+.logo span{color:#fff}
+nav a{color:white;text-decoration:none;margin:0 9px;font-size:14px}
+.hero{text-align:center;padding:65px 15px;background:linear-gradient(135deg,#17284b,#101323,#361b16)}
+.hero h1{font-size:36px;color:#ffbd39}
+.hero p{color:#ddd;margin:12px 0 22px}
+.btn{display:inline-block;padding:12px 23px;border-radius:8px;background:#ffad24;color:#111;text-decoration:none;font-weight:bold;border:0;cursor:pointer}
+section{padding:40px 5%}
+.heading{text-align:center;font-size:27px;margin-bottom:25px;color:#ffbd39}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:16px}
+.card{background:#151f32;padding:20px 13px;text-align:center;border:1px solid #293750;border-radius:13px}
+.card h3{margin:8px 0;color:#fff}
+.card p{color:#bbb;font-size:14px;margin:5px 0 13px}
+.price{color:#ffbd39;font-weight:bold;font-size:18px}
+.card button{margin-top:12px}
+.info{background:#151f32;border-radius:12px;padding:22px;margin-top:15px;text-align:center}
+.info p{color:#ddd;margin:7px}
+input,select,textarea{width:100%;padding:13px;margin:8px 0;background:#0b1322;color:white;border:1px solid #36435a;border-radius:7px}
+form{max-width:500px;margin:auto;background:#151f32;padding:22px;border-radius:12px}
+form button{width:100%;margin-top:10px}
+footer{text-align:center;padding:25px;background:#111a2c;color:#aaa}
+.small{font-size:12px;color:#aaa;margin-top:10px}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">FF <span>GAMING STORE</span></div>
+<nav>
+<a href="#home">Home</a>
+<a href="#diamond">Diamond</a>
+<a href="#id">ID Shop</a>
+<a href="#order">Order</a>
+</nav>
+</header>
+
+<div class="hero" id="home">
+<h1>🔥 FF GAMING STORE 🔥</h1>
+<p>Welcome to your trusted Free Fire Top Up & ID Marketplace</p>
+<p>দ্রুত ও সহজে Free Fire Diamond Top Up এবং ID কেনাবেচা করুন।</p>
+<a href="#diamond" class="btn">ORDER NOW</a>
+</div>
+
+<section id="diamond">
+<h2 class="heading">💎 Diamond Top Up</h2>
+<div class="grid">
+<div class="card"><h3>25 Diamonds</h3><div class="price">দাম জানতে যোগাযোগ করুন</div><button class="btn" onclick="buy('25 Diamonds')">Order Now</button></div>
+<div class="card"><h3>50 Diamonds</h3><div class="price">দাম জানতে যোগাযোগ করুন</div><button class="btn" onclick="buy('50 Diamonds')">Order Now</button></div>
+<div class="card"><h3>115 Diamonds</h3><div class="price">দাম জানতে যোগাযোগ করুন</div><button class="btn" onclick="buy('115 Diamonds')">Order Now</button></div>
+<div class="card"><h3>240 Diamonds</h3><div class="price">দাম জানতে যোগাযোগ করুন</div><button class="btn" onclick="buy('240 Diamonds')">Order Now</button></div>
+<div class="card"><h3>610 Diamonds</h3><div class="price">দাম জানতে যোগাযোগ করুন</div><button class="btn" onclick="buy('610 Diamonds')">Order Now</button></div>
+<div class="card"><h3>1240 Diamonds</h3><div class="price">দাম জানতে যোগাযোগ করুন</div><button class="btn" onclick="buy('1240 Diamonds')">Order Now</button></div>
+</div>
+</section>
+
+<section id="id">
+<h2 class="heading">🎮 Free Fire ID Buy & Sell</h2>
+<div class="grid">
+<div class="card">
+<h3>Buy Free Fire ID</h3>
+<p>পছন্দের Free Fire ID কিনতে যোগাযোগ করুন।</p>
+<button class="btn" onclick="buy('Free Fire ID Buy')">Buy ID</button>
+</div>
+<div class="card">
+<h3>Sell Your ID</h3>
+<p>আপনার Free Fire ID বিক্রি করতে আমাদের সাথে যোগাযোগ করুন।</p>
+<button class="btn" onclick="buy('Free Fire ID Sell')">Sell ID</button>
+</div>
+</div>
+</section>
+
+<section id="payment">
+<h2 class="heading">💳 Payment Methods</h2>
+<div class="grid">
+<div class="card"><h3>🩷 bKash</h3><p>Send Money / Payment</p></div>
+<div class="card"><h3>🟠 Nagad</h3><p>Send Money / Payment</p></div>
+</div>
+<div class="info">
+<p>পেমেন্ট করার আগে আমাদের সাথে যোগাযোগ করুন।</p>
+<p>পেমেন্ট নম্বর ও নির্দেশনা WhatsApp-এ নিশ্চিত করে নিন।</p>
+</div>
+</section>
+
+<section id="order">
+<h2 class="heading">📦 Place Your Order</h2>
+<form onsubmit="sendOrder(event)">
+<input id="customer" placeholder="আপনার নাম" required>
+<input id="uid" placeholder="Free Fire Player UID (Top Up-এর জন্য)">
+<select id="product" required>
+<option value="">প্যাকেজ নির্বাচন করুন</option>
+<option>25 Diamonds</option>
+<option>50 Diamonds</option>
+<option>115 Diamonds</option>
+<option>240 Diamonds</option>
+<option>610 Diamonds</option>
+<option>1240 Diamonds</option>
+<option>Free Fire ID Buy</option>
+<option>Free Fire ID Sell</option>
+</select>
+<select id="paymentMethod">
+<option>bKash</option>
+<option>Nagad</option>
+</select>
+<textarea id="note" placeholder="অতিরিক্ত তথ্য (ঐচ্ছিক)"></textarea>
+<button class="btn" type="submit">Send Order on WhatsApp</button>
+<p class="small">অর্ডার পাঠানোর পর WhatsApp-এ মেসেজটি নিজে Send করবেন।</p>
+</form>
+</section>
+
+<footer>
+<h3>🔥 FF GAMING STORE</h3>
+<p>Thank you for visiting our store!</p>
+<p>Diamond Top Up | Free Fire ID Buy & Sell</p>
+<p>© 2026 FF GAMING STORE. All Rights Reserved.</p>
+</footer>
+
+<script>
+// নিজের WhatsApp নম্বর বসাতে হবে: বাংলাদেশের নম্বর 880 দিয়ে শুরু হবে।
+const WHATSAPP_NUMBER = "8801XXXXXXXXX";
+
+function sendWhatsApp(message){
+if(WHATSAPP_NUMBER.includes("X")){
+alert("প্রথমে কোডে নিজের WhatsApp নম্বর বসাতে হবে।");
+return;
+}
+window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message),"_blank");
+}
+
+function buy(item){
+sendWhatsApp("আসসালামু আলাইকুম, FF GAMING STORE থেকে "+item+" নিতে চাই। বিস্তারিত জানাবেন।");
+}
+
+function sendOrder(event){
+event.preventDefault();
+const name=document.getElementById("customer").value;
+const uid=document.getElementById("uid").value;
+const product=document.getElementById("product").value;
+const payment=document.getElementById("paymentMethod").value;
+const note=document.getElementById("note").value;
+
+const message=
+"FF GAMING STORE ORDER\n"+
+"নাম: "+name+"\n"+
+"Player UID: "+(uid||"প্রযোজ্য নয়")+"\n"+
+"প্যাকেজ: "+product+"\n"+
+"পেমেন্ট: "+payment+"\n"+
+"অতিরিক্ত তথ্য: "+(note||"নেই");
+
+sendWhatsApp(message);
+}
+</script>
+
+</body>
+</html>
+
